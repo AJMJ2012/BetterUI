@@ -1,0 +1,4 @@
+﻿author = Dark-Assassin
+displayName = Better UI
+version = 1.0
+modReferences = DALib@1.4
