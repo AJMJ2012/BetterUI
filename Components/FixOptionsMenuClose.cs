@@ -15,12 +15,8 @@ class FixOptionsMenuClose : ModSystem
 
 	public override void Load()
 	{
-		try { HookEndpointManager.Add(IngameOptions_Close_Method, Override_IngameOptions_Close); } catch { throw new Exception("Hook Failed"); }
-	}
-
-	public override void Unload()
-	{
-		try { HookEndpointManager.Remove(IngameOptions_Close_Method, Override_IngameOptions_Close); } catch { }
+		if (Main.netMode == NetmodeID.Server) return;
+		MonoModHooks.Add(IngameOptions_Close_Method, Override_IngameOptions_Close);
 	}
 
 	static void Override_IngameOptions_Close(IngameOptions_Close_Delegate Close)

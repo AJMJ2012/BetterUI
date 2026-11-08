@@ -10,8 +10,8 @@ namespace BetterUI.UI;
 
 public class UIButton : UIPanel
 {
-	new private Color _borderColor = new Color(13, 20, 44) * 0.8f;
-	new private Color _backgroundColor = UICommon.DefaultUIBlueMouseOver;
+	private Color _borderColor = new Color(13, 20, 44) * 0.8f;
+	private Color _backgroundColor = UICommon.DefaultUIBlueMouseOver;
 	new public Color BorderColor { get { return _borderColor; } set { _borderColor = value; base.BorderColor = value; } }
 	new public Color BackgroundColor { get { return _backgroundColor; } set { _backgroundColor = value; base.BackgroundColor = value; } }
 	public Color MouseOverBorderColor = Colors.FancyUIFatButtonMouseOver;

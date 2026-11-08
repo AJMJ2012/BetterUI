@@ -13,17 +13,13 @@ namespace BetterUI.Components;
 
 class FancyUIClosesToOptions : ModSystem
 {
- static readonly MethodInfo IngameFancyUI_Close_Method = typeof(IngameFancyUI).GetMethod("Close", BindingFlags.Public | BindingFlags.Static);
-	delegate bool IngameFancyUI_Close_Delegate();
+	static readonly MethodInfo IngameFancyUI_Close_Method = typeof(IngameFancyUI).GetMethod("Close", BindingFlags.Public | BindingFlags.Static);
+	delegate void IngameFancyUI_Close_Delegate();
 
 	public override void Load()
 	{
-		try { HookEndpointManager.Add(IngameFancyUI_Close_Method, Override_IngameFancyUI_Close); } catch { throw new Exception("Hook Failed"); }
-	}
-
-	public override void Unload()
-	{
-		try { HookEndpointManager.Remove(IngameFancyUI_Close_Method, Override_IngameFancyUI_Close); } catch { }
+		if (Main.netMode == NetmodeID.Server) return;
+		MonoModHooks.Add(IngameFancyUI_Close_Method, Override_IngameFancyUI_Close);
 	}
 
 

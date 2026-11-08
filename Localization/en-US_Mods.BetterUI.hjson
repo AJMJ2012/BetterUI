@@ -1,0 +1,35 @@
+Keybinds: {
+	OpenSettingMenu.DisplayName: Open Setting Menu (Rebind Inventory)
+	OpenResourcePacksMenu.DisplayName: Open Resource Packs Menu
+}
+
+Configs: {
+	ClientConfig: {
+		ModConfig_AllMods: {
+			Tooltip: ""
+			Label: Mod Config: Show All Mods
+		}
+
+		ModConfig_ColourButtons: {
+			Tooltip: ""
+			Label: Mod Config: Coloured Buttons
+		}
+
+		ModConfig_OldIcon: {
+			Tooltip: ""
+			Label: Mod Config: Old Icon
+		}
+
+		ModConfig_SmallButtons: {
+			Tooltip: ""
+			Label: Mod Config: Small Buttons
+		}
+
+		ModConfig_Compact: {
+			Tooltip: ""
+			Label: Mod Config: Compact List
+		}
+
+		DisplayName: Client Config
+	}
+}

@@ -10,13 +10,13 @@ namespace BetterUI.UI;
 
 public class NewUIPanel : UIPanel
 {
-	new private Color _backgroundColor = new Color(26, 40, 89) * 0.8f;
+	private Color _backgroundColor = new Color(26, 40, 89) * 0.8f;
 	new public Color BackgroundColor { get { return _backgroundColor; } set { _backgroundColor = value; base.BackgroundColor = value; } }
-	public Color MouseOverBorderColor = new Color(20, 30, 56);
+	public Color MouseOverBorderColor = new(20, 30, 56);
 
-	new private Color _borderColor = new Color(13, 20, 44) * 0.8f;
+	private Color _borderColor = new Color(13, 20, 44) * 0.8f;
 	new public Color BorderColor { get { return _borderColor; } set { _borderColor = value; base.BorderColor = value; } }
-	public Color MouseOverBackgroundColor = new Color(46, 60, 119);
+	public Color MouseOverBackgroundColor = new(46, 60, 119);
 
 	public NewUIPanel()
 	{
